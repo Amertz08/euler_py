@@ -6,6 +6,8 @@
 
 
 static char module_docstring[] = "Provides interface to Project Euler problems";
+
+// Module functions
 static PyObject* euler_py_problem_one(PyObject* self, PyObject *args);
 
 static PyMethodDef module_methods[] = {
@@ -13,11 +15,19 @@ static PyMethodDef module_methods[] = {
         {NULL, NULL, 0, NULL}
 };
 
-PyMODINIT_FUNC init_euler_py(void)
+// Module definition
+PyObject* euler_pymodule = {
+        PyModuleDef_HEAD_INIT,
+        "euler_py",
+        module_docstring,
+        -1,
+        module_methods
+};
+
+// Module initialization function
+PyMODINIT_FUNC PyInit_euler_py(void)
 {
-    PyObject *m = PyInitModule3("euler_py", module_methods, module_docstring);
-    if (m == NULL)
-        return;
+    return PyModule_Create(&euler_pymodule);
 }
 
 #endif //EULER_PY_EULER_PY_H
