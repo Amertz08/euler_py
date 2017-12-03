@@ -1,6 +1,6 @@
 
 #include <Python.h>
-#include "euler.h"
+#include "../euler.h"
 
 static PyObject* euler_py_problem_one(PyObject *self, PyObject *args)
 {
