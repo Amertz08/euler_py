@@ -44,7 +44,7 @@ int problem_four(int number_digits)
     int min, max, ans;
     char* c_min;
     char* c_max;
-    char* c_mult;
+    char* c_ans;
 
     // Create our arrays
     c_min = (char *)malloc((sizeof(char) * number_digits) + 1);
@@ -65,23 +65,23 @@ int problem_four(int number_digits)
     max = atoi(c_max);
 
     // Assign memory for result
-    c_mult = (char *)malloc(sizeof(char) * (max * max));
+    c_ans = (char *)malloc(sizeof(char) * (max * max));
 
     // Iterate from max downward multiplying
     for (int i = max; i > min; i--) {
         for (int j = max; j > min; j--) {
             ans = i * j;
-            sprintf(c_mult, "%d", ans);
-            if (is_palindrome(c_mult)) {
+            sprintf(c_ans, "%d", ans);
+            if (is_palindrome(c_ans)) {
                 free(c_min);
                 free(c_max);
-                free(c_mult);
+                free(c_ans);
                 return ans;
             }
         }
     }
     free(c_min);
     free(c_max);
-    free(c_mult);
+    free(c_ans);
     return ans;
 }
