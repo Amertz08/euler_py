@@ -24,8 +24,8 @@ int main() {
 //    printf("Problem three: %ld\n", problem_three(600851475143));
     printf("Problem three: %ld\n", problem_three(13195));
 
-    char *word = "sas";
-    assert(is_palindrome(word));
+    assert(is_palindrome("sas"));
+    assert(!is_palindrome("not"));
     assert(problem_four(2) == 9009);
     printf("Problem four: %d\n", problem_four(3));
     return 0;
