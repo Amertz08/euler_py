@@ -1,6 +1,3 @@
-//
-// Created by adam on 12/3/17.
-//
 
 #include <Python.h>
 #include "euler.h"
