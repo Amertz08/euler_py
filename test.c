@@ -1,8 +1,8 @@
 #include <assert.h>
 #include <stdio.h>
 
-#include "euler.h"
-#include "helpers.h"
+#include "src/euler.h"
+#include "src/helpers.h"
 
 int main() {
 
