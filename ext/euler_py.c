@@ -7,8 +7,6 @@ static char module_docstring[] = "Provides interface to Project Euler problems";
 /*
  * Function implementations
  */
-
-
 static PyObject* euler_py_problem_one(PyObject *self, PyObject *args)
 {
     int max, result;
@@ -43,4 +41,3 @@ PyMODINIT_FUNC PyInit_euler_py(void)
 {
     return PyModule_Create(&euler_py_module);
 }
-
