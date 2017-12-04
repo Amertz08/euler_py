@@ -1,7 +1,3 @@
-//
-// Created by adam on 12/3/17.
-//
-
 #ifndef EULER_PY_HELPERS_H
 #define EULER_PY_HELPERS_H
 
