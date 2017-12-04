@@ -30,7 +30,7 @@ static PyMethodDef module_methods[] = {
 
 
 // Module definition
-PyObject* euler_py_module = {
+static struct PyModuleDef euler_py_module = {
         PyModuleDef_HEAD_INIT,
         "euler_py",
         module_docstring,
