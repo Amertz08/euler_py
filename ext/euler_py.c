@@ -20,7 +20,7 @@ static PyObject* euler_py_problem_one(PyObject *self, PyObject *args)
 
     return Py_BuildValue("i", result);
 }
-
+// END function implementations
 
 // Wire in functions to module
 static PyMethodDef module_methods[] = {
