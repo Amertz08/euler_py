@@ -1,4 +1,3 @@
-
 #include <Python.h>
 #include "../src/euler.h"
 
@@ -18,11 +17,50 @@ static PyObject* euler_py_problem_one(PyObject *self, PyObject *args)
 
     return Py_BuildValue("i", result);
 }
+
+static PyObject* euler_py_problem_two(PyObject *self, PyObject *args)
+{
+    int n, result;
+
+    if (!PyArg_ParseTuple(args, "i", &n))
+        return NULL;
+
+    result = problem_two(n);
+
+    return Py_BuildValue("i", result);
+}
+
+static PyObject* euler_py_problem_three(PyObject *self, PyObject *args)
+{
+    long n, result;
+
+    if (!PyArg_ParseTuple(args, "l", &n))
+        return NULL;
+
+    result = problem_three(n);
+
+    return Py_BuildValue("i", result);
+}
+
+static PyObject* euler_py_problem_four(PyObject *self, PyObject *args)
+{
+    int n, result;
+
+    if (!PyArg_ParseTuple(args, "i", &n))
+        return NULL;
+
+    result = problem_four(n);
+
+    return Py_BuildValue("i", result);
+}
 // END function implementations
 
 // Wire in functions to module
 static PyMethodDef module_methods[] = {
         {"problem_one", euler_py_problem_one, METH_VARARGS, "Solution to problem 1"},
+        {"problem_two", euler_py_problem_two, METH_VARARGS, "Solution to problem 2"},
+        {"problem_three", euler_py_problem_three, METH_VARARGS, "Solution to problem 3"},
+        {"problem_four", euler_py_problem_four, METH_VARARGS, "Solution to problem 4"},
         {NULL, NULL, 0, NULL}
 };
 
