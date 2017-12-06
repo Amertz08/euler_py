@@ -6,4 +6,4 @@ include_directories(/usr/local/include/python3.6)
 include_directories(include)
 
 file(GLOB SOURCE_FILES "src/*.c")
-add_executable(euler_py ${SOURCE_FILES})
+add_executable(euler_test ${SOURCE_FILES} ctests/test.c)
