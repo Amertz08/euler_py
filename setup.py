@@ -1,7 +1,7 @@
 import glob
 from distutils.core import setup, Extension
 
-sources = glob.glob('ext/*.c')
+sources = glob.glob('ext/*.c') + glob.glob('src/*.c')
 
 euler = Extension(
     'euler_py',
