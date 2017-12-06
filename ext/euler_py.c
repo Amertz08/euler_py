@@ -1,5 +1,5 @@
 #include <Python.h>
-#include "../src/euler.h"
+#include "euler.h"
 
 static char module_docstring[] = "Provides interface to Project Euler problems";
 
