@@ -5,7 +5,7 @@ sources = glob.glob('ext/*.c') + glob.glob('src/*.c')
 
 euler = Extension(
     'euler_py',
-    include_dirs=['src'],
+    include_dirs=['src', 'include'],
     sources=sources,
     extra_compile_args=['-std=c99']
 )
